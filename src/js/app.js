@@ -38,16 +38,14 @@ function render(variables = {}) {
          
           <h1>${variables.name == null ? " " : variables.name}
           ${variables.lastname == null ? " " : variables.lastname}</h1> 
-          ${
-            variables.includeCover == true
-              ? (variables.socialMediaPosition = "position-left")
-              : variables.socialMediaPosition
-          }
+         
           <h3>${variables.city && variables.country != null ? "," : ""}</h3>
           
          
       
-          <h2>Web Developer</h2>
+          <h2>${variables.role == null ? " " : variables.role}</h2>
+          <h2>${variables.country == null ? " " : variables.country}</h2>
+          <h2>${variables.city == null ? " " : variables.city}</h2>
           
           <ul class="position-right">
             <li><a href="https://twitter.com/${
